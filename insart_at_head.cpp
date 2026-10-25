@@ -12,12 +12,15 @@ public:
         this->next = NULL;
     }
 };
-void fun(Node* &head, int value){
-    Node* new_value = new Node(value);
-    new_value->next = head;
 
-    head =new_value;
+void insart_Head(Node *&head, int value)
+{
+    Node* newnode = new Node(value);
+    newnode->next = head;
+
+    head = newnode;
 }
+
 int main()
 {
     Node *head = new Node(10);
@@ -26,11 +29,12 @@ int main()
 
     head->next = a;
     a->next = b;
-    fun(head,40);
+
+    insart_Head(head,500);
 
     while (head != NULL)
     {
-        cout << head->val <<" ";
+        cout << head->val << endl; 
         head = head->next;
     }
     
