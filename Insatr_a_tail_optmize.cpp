@@ -38,6 +38,7 @@ int main()
             break;
         }
         Insart_at_tail(head, tail, value);
+        
     }
     Node* tamp = head;
 
